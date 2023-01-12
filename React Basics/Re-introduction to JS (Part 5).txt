@@ -1,0 +1,78 @@
+----------------------------------------------------
+I you want to add a value to a array simply use Push.
+Ex: a.push(item);
+----------------------------------------------------
+a.toString(): Returns a string with the toString() of each element separated by commas.
+----------------------------------------------------
+a.toLocaleString(): Returns a string with the toLocaleString() of each element separated by commas.
+----------------------------------------------------
+a.concat(item1[, item2[, ...[, itemN]]]): Returns a new array with the items added on to it.
+----------------------------------------------------
+a.join(sep): Converts the array to a string — with values delimited by the sep param.
+----------------------------------------------------
+a.pop(): Removes and returns the last item.
+----------------------------------------------------
+a.push(item1, ..., itemN): Add items to the end of the array.
+----------------------------------------------------
+a.shift(): Removes and returns the first item.
+----------------------------------------------------
+a.unshift(item1[, item2[, ...[, itemN]]]): Add items to the start of the array.
+----------------------------------------------------
+a.slice(start[, end]): Returns a sub-array.
+----------------------------------------------------
+a.sort([cmpfn]): Takes an optional comparison function.
+----------------------------------------------------
+a.splice(start, delcount[, item1[, ...[, itemN]]]): Lets you modify an array by deleting a section and replacing it with more items.
+----------------------------------------------------
+a.reverse(): Reverses the array.
+----------------------------------------------------
+Functions:
+function add(x, y) {
+  var total = x + y;
+  return total;
+}
+----------------------------------------------------
+The return statement can be used to return a value at any time, terminating the function.
+----------------------------------------------------
+You can out more arguments than the function is expecting:
+add(2, 3, 4); // 5
+// added the first two; 4 was ignored
+----------------------------------------------------
+Arguments is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.
+Ex: function add() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+
+add(2, 3, 4, 5); // 14
+----------------------------------------------------
+Averaging(média) function.
+Ex: function avg() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+}
+
+avg(2, 3, 4, 5); // 3.5
+----------------------------------------------------
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+----------------------------------------------------
+The avg() function takes a comma-separated list of argument.
+----------------------------------------------------
+The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
+Ex: avg.apply(null, [2, 3, 4, 5]); // 3.5
+----------------------------------------------------
+You can create anonymous functions.
+Ex: var avg = function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+----------------------------------------------------

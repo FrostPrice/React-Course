@@ -1,0 +1,51 @@
+----------------------------------------------------
+The value propertie is what the input is going to show.
+----------------------------------------------------
+Uncontrolled elements are those it values are on the HTML file.
+----------------------------------------------------
+Controlled elements are those it values are on the React part. It is better that the React part is storing the data. 
+----------------------------------------------------
+preventDefault() is used to make an action that normaly comes with the function, unable to do that default funtion.
+----------------------------------------------------
+this makes a reference to the instance of code that is inside. Basicaly reference the same class/component that you are in. 
+----------------------------------------------------
+To know the value of this, you look at the place where the function is called.
+----------------------------------------------------
+If an error appear saying that it cannot read 'something' of undefined. It is because the this statement it's undefined, or
+it cannot read this. 
+----------------------------------------------------
+One way to fix that problem is to bind the elements inside a constructor.
+Ex: constructor() {
+	this.drive = this.drive.bind(this);
+} 
+----------------------------------------------------
+When you bind, you are basically creating a new function.
+----------------------------------------------------
+Another way to fix it, it is to create/transform into an arrow funtion.
+Ex: onFormSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(this.state.term);
+    }
+----------------------------------------------------
+An arrow function bind the elements automaticly.
+----------------------------------------------------
+A third way is to create an arrow funtion directly on the sine that is being called.
+Ex: onSubmit={(event) => this.onFormSubmit(event)}
+----------------------------------------------------
+REMEMBER: To put the name of the variables.
+----------------------------------------------------
+The props only allow you to pass informaton from a parent to a child.
+----------------------------------------------------
+REMEMBER: To remove the semi-collon(;) in the end of a class.
+----------------------------------------------------
+To call a child inside the parent use the props systems.
+Ex: <SearchBar onSubmit={this.onSearchSubmit}/> (parent)
+
+onSubmit={this.onFormSubmit}(child)
+
+this.props.onSubmit(this.state.term);(calling props)
+----------------------------------------------------
+The only diference when using props on class and function components is that on class components, you need to put this.
+Ex: this.props.term();
+----------------------------------------------------

@@ -1,0 +1,34 @@
+----------------------------------------------------
+To do a conditinal rendering use JavaScript operators like if or the conditional operator to create elements 
+representing the current state, and let React update the UI to match them.
+Ex: const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+----------------------------------------------------
+If statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement can be executed.
+Ex: if (a > 0) {
+    result = 'positive';
+  } else {
+    result = 'NOT positive';
+  }
+----------------------------------------------------
+Conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), 
+then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy.
+Ex: function getFee(isMember) {
+  return (isMember ? '$2.00' : '$10.00');
+}
+----------------------------------------------------
+You can use variables to store elements. This can help you conditionally render a part of the component while the rest of the output doesn’t change.
+----------------------------------------------------
+if the condition is true, the element right after && will appear in the output. If it is false, React will ignore and skip it.
+----------------------------------------------------
+Remember that whenever conditions become too complex, it might be a good time to extract a component.
+----------------------------------------------------
+Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. 
+For instance componentDidUpdate will still be called.
+----------------------------------------------------
+You can define if a component is rendered but now to be shown on the screen. To do that use the null value. 
+----------------------------------------------------

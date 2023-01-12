@@ -1,0 +1,53 @@
+----------------------------------------------------
+State is similar to props, but it is private and fully controlled by the component.
+----------------------------------------------------
+To use props in a class you will need to put this. before.
+Ex: {this.props.name}
+----------------------------------------------------
+If using constructor, remember to set props and super(props).
+Ex: constructor(props) {
+	super(props);
+
+	state = 
+} 
+----------------------------------------------------
+We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called “mounting” in React.
+----------------------------------------------------
+We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called “unmounting” in React.
+----------------------------------------------------
+The setInterval() method repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+Ex: setInterval(func, [delay, arg1, arg2, ...]);
+----------------------------------------------------
+clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval().
+Ex: clearInterval(intervalID)
+----------------------------------------------------
+The componentDidMount() method runs after the component output has been rendered to the DOM.
+----------------------------------------------------
+tick() make the component run every second.
+----------------------------------------------------
+Do not modify state directly: this.state.comment = 'Hello';
+Use setState instead: this.setState({comment: 'Hello'});
+----------------------------------------------------
+The only place where you can assign this.state is the constructor.
+----------------------------------------------------
+React may batch multiple setState() calls into a single update for performance.
+----------------------------------------------------
+Use a second form of setState() that accepts a function rather than an object.
+Ex: this.setState((state, props) => ({
+  counter: state.counter + props.increment
+})); 
+----------------------------------------------------
+When you call setState(), React merges the object you provide into the current state.
+----------------------------------------------------
+You can update several variables inside a state independently with separate setState() calls
+----------------------------------------------------
+State is not accessible to any component other than the one that owns and sets it.
+----------------------------------------------------
+A component may choose to pass its state down as props to its child components.
+Ex: <FormattedDate date={this.state.date} />
+----------------------------------------------------
+Any state is always owned by some specific component, and any data or UI derived from that state can only affect 
+components “below” them in the tree.
+----------------------------------------------------
+You can use stateless components inside stateful components, and vice versa.
+----------------------------------------------------

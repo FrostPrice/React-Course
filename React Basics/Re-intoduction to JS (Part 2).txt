@@ -1,0 +1,53 @@
+----------------------------------------------------
+If you want to represent a single character, you just use a string consisting of that single character.
+Ex: let a = 'Hello'
+----------------------------------------------------
+The Length property show the length of a string('').
+Ex: 'hello'.length; // 5
+----------------------------------------------------
+Stings can be used like objects.
+Ex: 'hello'.charAt(0); // "h"
+	'hello, world'.replace('world', 'mars'); // "hello, mars"
+	'hello'.toUpperCase(); // "HELLO"
+----------------------------------------------------
+The Null value indicates a deliberate non-value.
+----------------------------------------------------
+Undefined is a value of type undefined that indicates an value that hasn't been assigned yet.
+----------------------------------------------------
+Undefined is a constant.
+----------------------------------------------------
+A Boolean types is true o false.
+	A false, 0, empty strings''"", NaN, null and undefined are a false value.
+	Everything else is true.
+Ex: Boolean('');  // false
+Boolean(234); // true
+----------------------------------------------------
+Boolean operations such as && (logical and), || (logical or), and ! (logical not) are supported.
+----------------------------------------------------
+Some variables are: let, var and const.
+----------------------------------------------------
+Let allows you to declare block-level variables.
+Ex: let a;
+	let name = 'Simon';
+----------------------------------------------------
+Const allows you to declare variables whose values are never intended to change.
+Ex: const Pi = 3.14; // variable Pi is set 
+	Pi = 1; // will throw an error because you cannot change a constant variable.
+----------------------------------------------------
+A variable declared with the var keyword is available from the function it is declared in. It's almost the same as te varaible let.
+Ex: var a; 
+	var name = 'Simon';
+----------------------------------------------------
+Exemple a using a scope:
+	// myVarVariable *is* visible out here
+
+	for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) { 
+  	// myVarVariable is visible to the whole function 
+	} 
+
+	// myVarVariable *is* visible out here 
+----------------------------------------------------
+If you declare a variable without assigning any value to it, its type is undefined.
+----------------------------------------------------
+Only functions have a scope.
+----------------------------------------------------

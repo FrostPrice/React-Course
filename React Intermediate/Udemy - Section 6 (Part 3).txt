@@ -1,0 +1,12 @@
+----------------------------------------------------
+It is good to create a Helper function to not have same code for a lot of content.
+Ex:  renderContent() {};
+----------------------------------------------------
+It is better to not have a lot of return inside the render() function.
+----------------------------------------------------
+this.setState({}) to update the State. 
+----------------------------------------------------
+To initialyze State. state = { obj1: ..., onj2: ..., };
+----------------------------------------------------
+this.state.lat = 37; NEVER TO THIS. THIS IS BAD.
+----------------------------------------------------

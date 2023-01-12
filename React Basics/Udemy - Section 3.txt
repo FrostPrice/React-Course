@@ -1,0 +1,62 @@
+----------------------------------------------------
+Component Nesting is a component inside another component.
+----------------------------------------------------
+Component Reusability is when we want to make a component that is going to be easily reused in our application.
+----------------------------------------------------
+Component Configuration means that we should be able to configure/modify our component when it is created.
+----------------------------------------------------
+You can put an already done CSS to the page on Semantic.ui. But it is easier on Semantic.ui CDN. And to use the CSS just put in the head of the 
+index on the public folder.
+----------------------------------------------------
+When you're writing a big number of JSX is better to use ();.
+----------------------------------------------------
+To use downloaded images is needed to put them in the public folder.
+----------------------------------------------------
+Faker.js is a webpage that creates a lot of fake data to use in the react project. Use in terminal npm install --save faker 
+----------------------------------------------------
+--save means that we want to save the file in our project.
+----------------------------------------------------
+Remeber: to use a library or another dependency/code from another file you need to use the Import ... from ...; .
+----------------------------------------------------
+To use a img, for exemple, that is inside a folder you'll need to use dots(.) and call it a function.
+Ex: <img alt="Avatar" src={faker.image.avatar()} /> 
+----------------------------------------------------
+It is better to reuse the components instead of copying them.
+----------------------------------------------------
+Find the JSX that apears to be duplicated.
+----------------------------------------------------
+Find the best name for the component to be reusable.
+----------------------------------------------------
+It's better to create a new file, on the SRC folder, to house the reusable component.
+----------------------------------------------------
+React components names are writen is uppercase.
+Ex: CommentDetail.js and not commentDetail.js
+----------------------------------------------------
+Create a new component to house the component in the file.
+----------------------------------------------------
+React Props sistems let us configure how a react component behaves and show the content.
+----------------------------------------------------
+To "link" 2 files, you need to export from the file that you want to show in the others files. And import on the file you want the content show. 
+That's called component nesting.
+Ex: Export default CommentDetail;(on the end of the file)
+import CommentDetail from './CommentDetail';
+----------------------------------------------------
+./ means that it will search in the same folder as the file.
+----------------------------------------------------
+And to show the component in the other folder, you use the JSX on the component.
+Ex: <CommentDetail /> and not {CommentDetail()}
+----------------------------------------------------
+And you can show this component as many times as you want.
+----------------------------------------------------
+The component that is housing other components are called parents components and the one that are inside this parents components are called child components.
+----------------------------------------------------
+The ideia of Props is that a parent component can pass data to it's child component. With te goal to customiza and configure the child component.
+----------------------------------------------------
+You can pass data from a child to a parent with props.
+----------------------------------------------------
+Props are properties.
+----------------------------------------------------
+The sintax to provide a prop to a child is:
+<CommentDetail author="Sam" />
+The name author can be anything you'd like.
+----------------------------------------------------

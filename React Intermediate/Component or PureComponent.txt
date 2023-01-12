@@ -1,0 +1,24 @@
+----------------------------------------------------
+PureComponent is exactly the same as Component except that it handles the shouldComponentUpdate method for you.
+----------------------------------------------------
+When props or state changes, PureComponent will do a shallow comparison on both props and state.
+----------------------------------------------------
+The component will re-render by default whenever shouldComponentUpdate is called.
+----------------------------------------------------
+A shallow comparison will check that primitives have the same value and that the references are the same between 
+more complex javascript values like objects and arrays.
+----------------------------------------------------
+If you were to mutate objects in a parent component, your “pure” child components wouldn’t update. 
+----------------------------------------------------
+Don’t bind values in functions in render.
+Ex: <CommentItem likeComment={() => this.likeComment(user.id)} />
+----------------------------------------------------
+Only pass the reference to the parent’s prototype method to children.
+Ex: <CommentItem likeComment={this.likeComment} userID={user.id} /> 
+----------------------------------------------------
+Don’t derive data in the render method.
+----------------------------------------------------
+Pure Components have 2 simple rule:
+	-Mutations are bad in general, but the problems are compounded when using PureComponent.
+	-If you’re creating new functions, objects, or arrays in the render method you’re (probably) doing it wrong.
+----------------------------------------------------

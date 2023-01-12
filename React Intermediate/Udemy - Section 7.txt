@@ -1,0 +1,51 @@
+----------------------------------------------------
+There is usually an App component in your project.
+----------------------------------------------------
+Try to think in a hieraquy of components.
+----------------------------------------------------
+It is common to create a folder with the name of components to save the components there. Including the App component.
+----------------------------------------------------
+If a file is in a folder you need to say what folder is in.
+Ex: ./components/App
+----------------------------------------------------
+To create text boxes or stuff that you want to handle user input, create a form tag.
+Ex: <form></form>
+----------------------------------------------------
+When creating a input, you will need to define the type of it.
+Ex: <input type="text" />
+----------------------------------------------------
+To add style directly on the tag use curly brackets {{}}, like this.
+Ex: <div style={{ marginTop: '10px'}}></div>
+----------------------------------------------------
+You need to add '' to the value for to be accept it. And if there is 2 words they stay together and the second words is in uppercase.
+----------------------------------------------------
+onChange tiggres when the content changes.
+Ex: <input type="text" onchange={this.onInputChange}/>
+----------------------------------------------------
+To classify a function as a event handler simply put (event) on the name of the function.
+Ex: onInputChange(event) {}
+----------------------------------------------------
+event.target.value will contain the text that the user just wrote into the input. This goes inside the onInputChange.
+Ex: onInputChange(event) {
+	event.target.value
+}
+----------------------------------------------------
+onChange is called whenever the user type something on the input.
+----------------------------------------------------
+onClick is called when the user click on something, the call back function will be called.
+----------------------------------------------------
+onSubmit is called whenever the users send a form. Needs to be a propertie inside the form element. 
+----------------------------------------------------
+To link these properties with their elementit is simple. Basicaly create a function with the onInput.. and the kind of propertie that you used.
+Ex: onInputClick() {}
+
+onClick={this.onInputClick}
+----------------------------------------------------
+The name onInputClick, for exemple, means on, the name of the element(tag) and the event we are watching for. The name can be what you want,
+but it is better to be that way.
+----------------------------------------------------
+Another syntax for event handlers:
+onChange={(event) => console.log(event.target.value)}
+----------------------------------------------------
+It is normal to abrevaite the event to e.
+----------------------------------------------------

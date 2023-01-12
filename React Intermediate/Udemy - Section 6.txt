@@ -1,0 +1,69 @@
+----------------------------------------------------
+Lifecycles methods is a function that we can, optionly, define in our class based components. It's automaticly 
+called by React at some point in the components lifecycle. 
+----------------------------------------------------
+componentDidMount() {} will be called once when the component is first rendered on the screen.
+----------------------------------------------------
+componentDidUpdate() {} will be called at any time our component it's updated.
+----------------------------------------------------
+componentWillUnmount() {} will make the component no longer to be shown on the screen.
+----------------------------------------------------
+The constructor() {} is good to place the State initialization. And can start doing some data loading, like getting the position of the user.
+----------------------------------------------------
+The render() {} return some JSX. It is meant for only JSX.
+----------------------------------------------------
+componentDidMount() {} is used when you want a component to be processed one time. And it is good for data loading.
+----------------------------------------------------
+It is better to do a data loading inside the componentDidMount than the Constructor component.
+----------------------------------------------------
+componentDidUpdate is going to be called whenever the component it's updated. This is a good place to do some data loading that is changed 
+when the component it's updated.
+----------------------------------------------------
+componentWillUnmount it is good when we want to remove a component and do a clean up afterwards. This is done especialy for non-React stuff. 
+----------------------------------------------------
+An alternate way of initializating a State without a constructor funtion:
+state = { obj1: 'Hi', obj2: 'There'};
+
+This function already implements a contructor function even though it is not inside one.
+----------------------------------------------------
+You can pass a State from a component down to a Props to a child.
+----------------------------------------------------
+The component also rerender any children it has.
+----------------------------------------------------
+REMEMBER: To assing the name of the component as (props).
+----------------------------------------------------
+new Date().getMonth() return the month we are curently in. Being 0 january and 11 december.
+----------------------------------------------------
+To link 2 functions with props:
+const getSeason = (lat, month) => {
+
+};
+
+const SeasonDisplay = (props) => {
+    const season = getSeason(props.lat, new Date().getMonth());
+};
+----------------------------------------------------
+The ? means it is a condicional operator, with 2 values and one of them being true.
+----------------------------------------------------
+A JS expression inside if (or not):
+	condition ?(it means 'if') value 1(True) :(Separates the values) value 2(False); 
+----------------------------------------------------
+REMEMBER: Else is used when the values of If are any of the sugested.
+----------------------------------------------------
+Exemple of If and Else:
+  if (month > 2 && month < 9) {
+        return lat > 0 ? 'summer' : 'winter';
+    } Else {
+        lat > 0 ? 'winter' : 'summer';
+    }
+----------------------------------------------------
+You can put any type of expression inside {}.
+----------------------------------------------------
+You put the logic already inside the JSX, with {}. Or you can make a variable and reference this variable inside the JSX.
+----------------------------------------------------
+=== means that something equals to.
+----------------------------------------------------
+Using `${...} ...` the value that is inside the curly bracets {} and in front of $ is the name of a propertie, function, etc. And the
+name afterwards is the name of the class. 
+Ex:<i className="`${icon} icon`" />
+----------------------------------------------------

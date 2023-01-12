@@ -1,0 +1,60 @@
+----------------------------------------------------
+JSX is a simplier way to create a html code inside JS.
+Ex: const App = function() {
+    return <div>Hi there!</div>
+};
+----------------------------------------------------
+You can go to Babeljs.io to see the JSX converted into normal JS.
+----------------------------------------------------
+Label is used to link the name with the input. For in label and id in the input.
+Ex: <div>
+  <label for="name">Enter name:</label>
+  <input id="name"/>
+  <button>Submit</button>
+</div>
+----------------------------------------------------
+You'll need to select a type of input.
+Ex: <input id="name" type="text"/>
+----------------------------------------------------
+In HTML you can put style directly on the tag.
+Ex:  <button style="background: blue; color: white;">Submit</button>
+----------------------------------------------------
+When returnin the value of JSX, always remeber to put the value in the same line as the return statement.
+Ex:     return <div>Hi there!</div>
+
+Or you can use () in the retir
+return (
+	<div>Hi there!</div>
+)
+----------------------------------------------------
+JSX and HTML diferences are: when styling, when creating a class and JSX can reference JS variables. 
+----------------------------------------------------
+To style in JSX you'll change the "" for {{}}.
+Ex: <div style={{backgroundColor: 'blue', color: 'white',}}>
+The first {} are used to "create" a JS variable and the second {} are used to "create" a JS object.
+Ex: <div style={{border: '1px solid red',}}>
+----------------------------------------------------
+And the values in JSX need to be wrapped in a string ''.
+----------------------------------------------------
+"" are used in JSX properties.
+----------------------------------------------------
+To create a class in JSX, you'll use className.
+Ex: <div className="test"></div>
+----------------------------------------------------
+To reference a JS variables inside JSX, you need to use {}.
+Ex:    <button style={{ backgroundColor: 'blue', color: 'white', }}>
+           {buttonText}
+       </button>
+----------------------------------------------------
+Always remember to use () when calling a function or a variable.
+----------------------------------------------------
+You can't reference objects inside a JSX component. To fix that, you'll have to reference the variable inside the object.
+Ex: <div>
+	{object.variable}
+</div>
+----------------------------------------------------
+There are some 'forbiten' words like for, that give an error because the browser may think it is a JS function for. To fix that use htmlFor.
+Ex: <label htmlFor=""></label>
+----------------------------------------------------
+It's recommended to leave the console open.
+----------------------------------------------------

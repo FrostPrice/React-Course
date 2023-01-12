@@ -1,0 +1,65 @@
+----------------------------------------------------
+You can add bulit-in objects to a prototype.
+Ex: var s = 'Simon';
+s.reversed(); // TypeError on line 1: s.reversed is not a function
+
+String.prototype.reversed = function() {
+  var r = '';
+  for (var i = this.length - 1; i >= 0; i--) {
+    r += this[i];
+  }
+  return r;
+};
+
+s.reversed(); // nomiS
+----------------------------------------------------
+toString: it is a method that is called when you try to represent an object as a string.
+Ex: var s = new Person('Simon', 'Willison');
+s.toString(); // [object Object]
+
+Person.prototype.toString = function() {
+  return '<Person: ' + this.fullName() + '>';
+}
+
+s.toString(); // "<Person: Simon Willison>"
+----------------------------------------------------
+var bill = trivialNew(Person, 'William', 'Orange');
+
+Is almost the same as
+
+var bill = new Person('William', 'Orange');
+----------------------------------------------------
+The call() method calls a function with a given this value and arguments provided individually.
+Ex: function lastNameCaps() {
+  return this.last.toUpperCase();
+}
+var s = new Person('Simon', 'Willison');
+lastNameCaps.call(s);
+// Is the same as:
+s.lastNameCaps = lastNameCaps;
+s.lastNameCaps(); // WILLISON
+----------------------------------------------------
+An important detail of nested functions in JavaScript is that they can access variables in their parent function's scope.
+Ex: function parentFunc() {
+  var a = 1;
+
+  function nestedFunc() {
+    var b = 4; // parentFunc can't use this
+    return a + b; 
+  }
+  return nestedFunc(); // 5
+}
+----------------------------------------------------
+The makeAdder(): creates new 'adder'(adicionadora) functions, each of which, when called with one argument, adds it to the argument that it was created with.
+Ex:            function makeAdder(a) {
+            return function(b) {
+                return a + b;
+            };
+            }
+            var add5 = makeAdder(5);
+            var add20 = makeAdder(20);
+            add5(6); // returns 11
+            add20(7); // Returns 27
+----------------------------------------------------
+A closure is the combination of a function and the scope object in which it was created.
+----------------------------------------------------

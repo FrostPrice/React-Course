@@ -1,0 +1,66 @@
+----------------------------------------------------
+JavaScript supports object-oriented programming with object prototypes, instead of classes.
+----------------------------------------------------
+Because they are objects, functions may be stored in variables and passed around like any other object.
+----------------------------------------------------
+JavaScript's types are:
+	Number
+	String
+	Boolean
+	Object
+		Function
+		Array
+		Date
+		RegExp
+	Symbol
+	Undefined
+	Null
+----------------------------------------------------
+The RegExp object is used for matching text with a pattern.
+----------------------------------------------------
+Functions are a type of object.
+----------------------------------------------------
+BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1.
+----------------------------------------------------
+There's no such thing as an integer in JavaScript.
+Ex: console.log(3 / 2);             // 1.5, not 1
+	console.log(Math.floor(3 / 2)); // 1
+----------------------------------------------------
+The standard arithmetic operators are supported (+,-,*,/).
+----------------------------------------------------
+There is also an object Math that provides advanced mathematical functions and constants.
+Ex: Math.sin(3.5);
+var circumference = 2 * Math.PI * r;
+----------------------------------------------------
+The parseInt() function parses a string argument and returns an integer of the specified radix.
+Ex: parseInt('123', 10); // 123
+	parseInt('010', 10); // 10
+----------------------------------------------------
+You can convert a binary number into a integer.
+Ex: parseInt('11', 2); // 3
+----------------------------------------------------
+The parseFloat() function parses an argument (converting it to a string first if needed) and returns a floating point number.
+----------------------------------------------------
+You can also use the unary + operator to convert values to numbers
+Ex: + '42';   // 42
++ '010';  // 10
++ '0x10'; // 16
+----------------------------------------------------
+NaN is the same as Not a Number.
+Ex: parseInt('hello', 10); // NaN
+----------------------------------------------------
+If provide NaN as an operand to any mathematical operation, the result will also be NaN.
+Ex: NaN + 5; // NaN
+----------------------------------------------------
+The isNaN() function determines whether a value is NaN or not.
+Ex: isNaN(NaN); // true
+----------------------------------------------------
+Infinity or -Infinity is a numeric value representing infinity.
+Ex:  1 / 0; //  Infinity
+	-1 / 0; // -Infinity
+----------------------------------------------------
+isFinite() function determines whether the passed value is a finite number.
+Ex: isFinite(1 / 0); // false
+	isFinite(-Infinity); // false
+	isFinite(NaN); // false
+----------------------------------------------------

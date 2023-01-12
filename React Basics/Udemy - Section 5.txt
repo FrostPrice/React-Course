@@ -1,0 +1,67 @@
+----------------------------------------------------
+The rules of state are:
+	Can only be used in class components;
+	States are similar with Props, but not the same. You will get confused;
+	State is a JS object that has some amout of data relevant to the component;
+	Updating a State will make the component rerender it's content in no time;
+	State must be inicialized when a component is created.
+	A STATE CAN ONLY BE UPDATED USING THE FUNCTION setState;
+----------------------------------------------------
+The constructor function, when the app starts, it will be the first thing to be called.
+Ex: constructor() {};
+And it's the first thing to initialize State.
+----------------------------------------------------
+It need to have the props name:
+constructor (props) {};
+----------------------------------------------------
+YOU MUST CALL THE FUNCTION: super(props); (inside the constructor)
+----------------------------------------------------
+The super(props); calls the constructor parent from the React Library.
+----------------------------------------------------
+super(props); have to be the first thing on the state.
+----------------------------------------------------
+And to create a State object, you'll need to write inside the constructor:
+this.state = {};
+----------------------------------------------------
+When you don't know the value of a propertie yet, use the value null.
+----------------------------------------------------
+On the this.state you will put the most relevant data that you want to inicialize with the state. It can be the name of your choice, for the property.
+----------------------------------------------------
+To reference a State, you will use the same method as Props.
+Ex: <div> {this.state.lat} </div>
+----------------------------------------------------
+Look carefully on what you put on the Render method, because the Render works at all time, non stop.
+Make sure you don't call it again a function that has already been called.
+----------------------------------------------------
+To update the state use setState and call back the State name that you choose.
+Ex:  this.setState({ lat: position.coords.latitude });
+----------------------------------------------------
+REMEMBER: setState()
+----------------------------------------------------
+this.state.lat = position.coords.latitude   <===== THIS IS BAD!!!!!
+----------------------------------------------------
+THIS IS THE ONLY TIME we do direct assignment to this.state:
+ this.state = { lat: null };
+----------------------------------------------------
+When you got text on a State and you and it to be blank just put ''.
+Ex: {..., error: '' };
+----------------------------------------------------
+It is good to use console.log to know where some of the properties/value, etc are located.
+----------------------------------------------------
+When you use this.setState you are not removing properties, you are only adding them.
+----------------------------------------------------
+WHACTH OUT FOR THE SEMICOLLON ; .
+----------------------------------------------------
+Use the If statement to control the content that is shown.
+Ex: If (error && !error) {return <div>Error</div>};
+----------------------------------------------------
+&& means AND. ! means not.
+----------------------------------------------------
+If (Something true && Something false) {what will happen if the conditions are reach}
+When the conditions are oposites leave the same order.
+Ex: If (!Something false && Something true) {what will happen if the conditions are reach}
+----------------------------------------------------
+You can use Else if the condition of the If statement are not reach.
+----------------------------------------------------
+Conditioning is when you make conditions with the If and Else statement for the browser or the user.
+----------------------------------------------------

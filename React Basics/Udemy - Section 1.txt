@@ -1,0 +1,59 @@
+----------------------------------------------------
+React is an external script, a library from JS.
+----------------------------------------------------
+When using HTMl always remeber to close the Tags.
+----------------------------------------------------
+vh means that it will take the full height of the page.
+----------------------------------------------------
+vw means that it will take the full height of the page.
+----------------------------------------------------
+React is used to create a way to show the content on the screen and how the user interact with it.
+----------------------------------------------------
+And the content is linked to the HTML.
+----------------------------------------------------
+It's common to used third parties libraries for JavaScript to make the development easier and faster, like react.
+----------------------------------------------------
+Components are the basic pieces of react.
+Ex: React.Component {
+};
+----------------------------------------------------
+A Component is used to show the content of the HTML.
+----------------------------------------------------
+To create components you can use either JS classes or JS functions.
+----------------------------------------------------
+JSX tells to react how should show the content on the browser and how the user should react with it.
+----------------------------------------------------
+Event Handler detect when a user is interacting with the application.
+----------------------------------------------------
+React knows what a component is and how to make it work together.
+----------------------------------------------------
+ReactDOM knows how to take a component and make it show up on the DOM(HTML).
+----------------------------------------------------
+NPM is node package manager, it runs the code. -G means that you want to install the package globally on our computer, to be used on the terminal.
+----------------------------------------------------
+To create a new project: (on terminal) npx create-react-app <name of the project>
+----------------------------------------------------
+Babel creates a new code that on be used in all browser, let us use earlier versions of JS.
+----------------------------------------------------
+SRC is the folder where we put our code in.
+----------------------------------------------------
+Public is a folder for static files, like images, stuff that not going to change.
+----------------------------------------------------
+Node_modules is all the dependencies installed when creating a project.
+----------------------------------------------------
+Packages.json has all the dependencies that were installed and has a configuration project inside of it.
+----------------------------------------------------
+Package-lock.json it records the exact version of the dependencies installed.
+----------------------------------------------------
+README.md is instructions on how to use the project.
+----------------------------------------------------
+Import <the name we want to use> from <'libraries name'> is used to get acess to others libraries.
+----------------------------------------------------
+From is used to say that we want to get acess to a library.
+----------------------------------------------------
+A component is either a class or a function, that produes the HTML that is shown to the user and handles feedback from the user.
+Ex: 
+----------------------------------------------------
+<name you choose>.render() is used to show the content. 
+----------------------------------------------------
+document.querySelector('#root') is used to "link" the code with some file or id.

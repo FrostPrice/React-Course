@@ -1,0 +1,59 @@
+----------------------------------------------------
+Refs provide a way to access DOM nodes or React elements created in the render method.
+----------------------------------------------------
+The child to be modified could be an instance of a React component, or it could be a DOM element.
+----------------------------------------------------
+Refs are good for:
+	-Managing focus, text selection, or media playback.
+	-Triggering imperative animations.
+	-Integrating with third-party DOM libraries.
+----------------------------------------------------
+Avoid using refs for anything that can be done declaratively.
+----------------------------------------------------
+Don’t Overuse Refs.
+----------------------------------------------------
+Refs are created using React.createRef() and attached to React elements via the ref attribute.
+Ex: class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return <div ref={this.myRef} />;
+  }
+}
+----------------------------------------------------
+A reference to the node becomes accessible at the current attribute of the ref.
+Ex: const node = this.myRef.current;
+----------------------------------------------------
+The value of the ref differs depending on the type of the node:
+	-When the ref attribute is used on an HTML element, the ref created in the constructor with React.createRef() 
+	receives the underlying DOM element as its current property.
+	-When the ref attribute is used on a custom class component, the ref object receives the mounted instance of the 
+	component as its current.
+	-You may not use the ref attribute on function components because they don’t have instances.
+----------------------------------------------------
+React will assign the current property with the DOM element when the component mounts, and assign it back to null when it unmounts. 
+----------------------------------------------------
+Ref updates happen before componentDidMount or componentDidUpdate lifecycle methods.
+----------------------------------------------------
+You may not use the ref attribute on function components because they don’t have instances.
+Ex: function MyFunctionComponent() {
+  return <input />;
+}
+
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.textInput = React.createRef();
+  }
+  render() {
+    // This will *not* work!
+    return (
+      <MyFunctionComponent ref={this.textInput} />
+    );
+  }
+}
+----------------------------------------------------
+Ref forwarding is a technique for automatically passing a ref through a component to one of its children. 
+----------------------------------------------------

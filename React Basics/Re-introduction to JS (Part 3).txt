@@ -1,0 +1,67 @@
+----------------------------------------------------
+Numeric operators are +, -, *, / and % which is the remainder operator.
+----------------------------------------------------
+Values are assigned using =, += and -=. It can extend to x = x operator y.
+Ex: x += 5;
+	x = x + 5;
+----------------------------------------------------
+++ and -- are used to increment and decrement respectively. And can be used to prefix and postfix operators.
+Ex: 'hello' + ' world'; // "hello world"
+----------------------------------------------------
+If you add a string to a number (or other value) everything is converted into a string first.
+Ex: '3' + 4 + 5;  // "345"
+ 	3 + 4 + '5'; // "75"
+----------------------------------------------------
+Adding an empty string to something is a useful way of converting it to a string itself.
+----------------------------------------------------
+Comparisons can be made using <, >, <= and >=. 
+----------------------------------------------------
+== perform a comparasion of coercion (diference) between the values. It's true because they're not equal.
+Ex: 123 == '123'; // true
+1 == true; // true
+----------------------------------------------------
+Use === to avoid the coercion. It's false because they are no equal.
+Ex: 123 === '123'; // false
+1 === true;    // false
+----------------------------------------------------
+!= is used to something not equal to, true to not equal. And !== to something exactly no the same, it's true when they are not the same or aren't the same type.
+----------------------------------------------------
+If executes an function if the values are true. And Else will be activaded if the value of If does not meet it requirements.
+Ex: var name = 'kittens';
+	if (name == 'puppies') {
+ 	 name += ' woof';
+	} else if (name == 'kittens') {
+	  name += ' meow';
+	} else {
+	  name += '!';
+	}
+	name == 'kittens meow';
+----------------------------------------------------
++= adds a value to a variable.
+Ex: x += y	x = x + y
+----------------------------------------------------
+While is used for basic loops. And do-while will make the loop execute at least once.
+Ex: while (true) {
+ 	 // an infinite loop!
+	}
+
+	var input;
+	do {
+  	input = get_input();
+	} while (inputIsNotValid(input));
+----------------------------------------------------
+For lets you provide the control information for your loop on a single line.
+Ex: for (var i = 0; i < 5; i++) {
+  // Will execute 5 times
+}
+----------------------------------------------------
+For...of creates a loop iterating over iterable objects.
+Ex: for (let value of array) {
+  // do something with value
+}
+----------------------------------------------------
+For...in iterates over all enumerable properties of an object that are keyed by strings.
+Ex: for (let property in object) {
+  	// do something with object property
+	}
+----------------------------------------------------

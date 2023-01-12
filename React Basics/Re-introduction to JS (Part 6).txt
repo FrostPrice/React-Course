@@ -1,0 +1,97 @@
+----------------------------------------------------
+This is a way to "hide" some local vairables.
+Ex: var a = 1;
+var b = 2;
+
+(function() {
+  var b = 3;
+  a += b;
+})();
+
+a; // 4
+b; // 2
+----------------------------------------------------
+You can call functions recursively:
+function countChars(elm) {
+  if (elm.nodeType == 3) { // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+    count += countChars(child);
+  }
+  return count;
+}
+----------------------------------------------------
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+Ex: var charsInBody = (function counter(elm) {
+  if (elm.nodeType == 3) { // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+    count += counter(child);
+  }
+  return count;
+})(document.body);
+----------------------------------------------------
+JavaScript functions are themselves objects and you can add or change properties on them.
+----------------------------------------------------
+Functions work like class.
+Ex: function makePerson(first, last) {
+  return {
+    first: first,
+    last: last
+  };
+}
+function personFullName(person) {
+  return person.first + ' ' + person.last;
+}
+function personFullNameReversed(person) {
+  return person.last + ', ' + person.first;
+}
+
+var s = makePerson('Simon', 'Willison');
+personFullName(s); // "Simon Willison"
+personFullNameReversed(s); // "Willison, Simon"
+----------------------------------------------------
+It's better to attach a function to an object.
+Ex: function makePerson(first, last) {
+  return {
+    first: first,
+    last: last,
+    fullName: function() {
+      return this.first + ' ' + this.last;
+    },
+    fullNameReversed: function() {
+      return this.last + ', ' + this.first;
+    }
+  };
+}
+
+var s = makePerson('Simon', 'Willison');
+s.fullName(); // "Simon Willison"
+s.fullNameReversed(); // "Willison, Simon"
+----------------------------------------------------
+The value of This is determined by how a function is called.
+----------------------------------------------------
+Used inside a function, this refers to the current object.
+----------------------------------------------------
+Mistake with This:
+var s = makePerson('Simon', 'Willison');
+var fullName = s.fullName;
+fullName(); // undefined undefined
+----------------------------------------------------
+The new operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
+----------------------------------------------------
+Functions that are designed to be called by new are called constructor functions.
+----------------------------------------------------
+You can modify anything at anytime when using a prototype.
+Ex: var s = new Person('Simon', 'Willison');
+s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
+
+Person.prototype.firstNameCaps = function() {
+  return this.first.toUpperCase();
+};
+s.firstNameCaps(); // "SIMON"
+----------------------------------------------------

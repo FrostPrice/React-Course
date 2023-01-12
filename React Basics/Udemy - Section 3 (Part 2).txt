@@ -1,0 +1,36 @@
+----------------------------------------------------
+On props you can refenrence a JS variable.
+Ex: <CommentDetail author= {author} />
+----------------------------------------------------
+console.log: Show a message in the console of the browser.
+----------------------------------------------------
+In the child names, on the other file, you put Props in the function. And we need to "consume" the data, to do that you reference the variable.
+Ex:             <a href="/" className="author">
+                {props.author}
+            </a>
+----------------------------------------------------
+Remeber to have the same name of the prop, when refering to a prop.
+Ex: <CommetDetail author="..." />
+
+            <a href="/" className="author">
+                {props.author}
+            </a>
+----------------------------------------------------
+Props is an argument/object. You'll put it in the funtion section, in the child, to call it a prop. 
+----------------------------------------------------
+Always remember to call it a function with ().
+----------------------------------------------------
+To make a prop reusable, you basically create a new component, in another file, that can be used separated from each other.
+----------------------------------------------------
+To use a prop that is inside a parent you will need to call it a variable and use the value children.
+Ex: {props.children}
+----------------------------------------------------
+And to make a prop parent and a child, simply wrap around the parent on the child, just like HTML.
+Ex: <Parent>
+	<child />
+</Parent> 
+----------------------------------------------------
+And when the children are referenced in the props parent, you'll be able to reuse the parent in any way you'd like.
+----------------------------------------------------
+ALWAYS REMEMBER TO CALL IT A FUNCTION USING () AND =>.
+----------------------------------------------------

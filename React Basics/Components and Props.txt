@@ -1,0 +1,52 @@
+----------------------------------------------------
+Function is a valid React component because it accepts a single “props”(properties) object argument with data and returns a React element.
+Ex: function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+----------------------------------------------------
+Class component, can be used for more complex and bigger projects:
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+----------------------------------------------------
+Elements can also represent user-defined components.
+Ex: const element = <Welcome name="Sara" />;
+----------------------------------------------------
+Exemple of props:
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+----------------------------------------------------
+Always start component names with a capital letter.
+For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
+----------------------------------------------------
+Components can refer to other components in their output. And you can use the same name and value for the atributes.
+Ex: ...<div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div> ...
+----------------------------------------------------
+We recommend naming props from the component’s own point of view rather than the context in which it is being used.
+----------------------------------------------------
+It is better to create a new file for only some parts that can be easly accessed and to be reusable.
+Ex: <div className="UserInfo">
+        <Avatar user={props.author} />
+----------------------------------------------------
+A good rule of thumb is that if a part of your UI is used several times (Button, Panel, Avatar), 
+or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be extracted to a separate component.
+----------------------------------------------------
+All React components must act like pure functions with respect to their props.
+----------------------------------------------------
+A pure function ia the one who does not change their inputs. And an impure function are those who change their inputs. 
+----------------------------------------------------
+State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.
+----------------------------------------------------

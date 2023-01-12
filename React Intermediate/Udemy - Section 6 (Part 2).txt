@@ -1,0 +1,62 @@
+----------------------------------------------------
+Sometimes it is better to create a component for configurations.
+Ex: const seasonConfig = {
+    summer: {
+        text: "Let's hit the beach",
+        iconName: "sun",
+    },
+};
+----------------------------------------------------
+In the config component you can create object to have the value that you want to show, this is better for organization and 
+to keep the code easy to use.
+----------------------------------------------------
+The square brackets [] can be used to reference a component to another.
+Ex:  seasonConfig[season]
+----------------------------------------------------
+To add CSS create a new file with .css on the src folder.
+----------------------------------------------------
+To link the CSS with the file that you want you need to import the CSS.
+Ex: import './FileName.css';
+----------------------------------------------------
+You can link not only the file, but components too to the CSS file.
+----------------------------------------------------
+You can make reference to the child of the components. And objects too.
+----------------------------------------------------
+On CSS you can reference not only the className but the child it is inside.
+Ex: .parent.child div(the tag you want to style) {}
+----------------------------------------------------
+    const {text, iconName } = seasonConfig[season] // Links the seasonConfig with season, showing {text, iconName} deconstructing them.
+----------------------------------------------------
+    //constructor(props) {
+    //    super(props);
+    //
+    //    // THIS IS THE ONLY TIME we do direct assignment
+    //    // to this.state
+    //    this.state = { lat: null, errorMessage: '' };
+    //  
+    //};
+----------------------------------------------------
+            // Another way of doing this: 
+            //(position) => {
+            //  // We called setState!!!!
+            // this.setState({ lat: position.coords.latitude });
+            //
+            //  // We did not!!!
+            // this.state.lat = position.coords.latitude   <===== THIS IS BAD!!!!!
+            // },
+            // (err) => {
+            //     this.setState({errorMessage: err.message});
+            // }
+
+----------------------------------------------------
+|| means OR.
+----------------------------------------------------
+You can make a default props, with the stuff that you can use if you forgot to put it in the JSX. To do that make an object 
+inside the Function with props, but using . .
+Ex: function.defaultProp = {
+	let: 'show me your face',
+};
+----------------------------------------------------
+It is better to costumize the props, because the custom props will overide the defaulProps.
+Ex: <Spinner message="Please accept location request" />;
+----------------------------------------------------

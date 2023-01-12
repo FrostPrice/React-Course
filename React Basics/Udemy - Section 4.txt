@@ -1,0 +1,39 @@
+----------------------------------------------------
+Function components are good for simple content that we want to show the user.
+----------------------------------------------------
+Class components are good fo everything, like complex logic and how it react of use feedback, etc.
+----------------------------------------------------
+Class components have the benefits of: better code organization, it can use the state system in React that is something easier to handle the user's input,
+and understands lifecycles events that is a thing easier to do things when the app first starts.
+----------------------------------------------------
+To get the position of the user, there is a function to it, the getCurrentPosition. And this function needs 2 arguments.
+Ex: window.navigator.getCurrentPosition ();
+----------------------------------------------------
+The 2 arguments are if it succeeded in getting the location and the other didn't suceeded. They can be arguments like functions.
+Ex: (position) => console.log(),  
+----------------------------------------------------
+To get the geolocation of the user, it takes a little bit of time.
+----------------------------------------------------
+Class components are faster than functional components.
+----------------------------------------------------
+There are some rules when using class components:
+	It must be a JS class;
+	It must extends with React.component;
+	It must return, in the render, some JSX;
+----------------------------------------------------
+To create a class: class App extends React.Component {}
+It need to have the "extends ...".
+----------------------------------------------------
+To create a render method: (inside the class) render () {}
+----------------------------------------------------
+REMEMBER: A CLASS MUST RETURN A RENDER OF JSX.
+Ex: class App extends React.Component {
+	render () {
+		return <div>...</div>;
+	}
+}
+----------------------------------------------------
+Everything goes inside the render method.
+----------------------------------------------------
+The React.Component allow us to use a lot of built-in functionality from the class React.Component to our class.
+----------------------------------------------------

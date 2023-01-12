@@ -1,0 +1,15 @@
+----------------------------------------------------
+One common way to structure projects is to locate CSS, JS, and tests together inside folders grouped by feature or route.
+----------------------------------------------------
+The definition of a “feature” is not universal, and it is up to you to choose the granularity.
+----------------------------------------------------
+Another popular way to structure projects is to group similar files together.
+----------------------------------------------------
+Consider limiting yourself to a maximum of three or four nested folders within a single project.
+----------------------------------------------------
+If you’re just starting a project, don’t spend more than five minutes on choosing a file structure.
+----------------------------------------------------
+It is a good idea to keep files that often change together close to each other, that is called “colocation”.
+----------------------------------------------------
+If you feel completely stuck, start by keeping all files in a single folder.
+----------------------------------------------------

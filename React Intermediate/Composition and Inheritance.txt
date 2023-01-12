@@ -1,0 +1,21 @@
+----------------------------------------------------
+Some components don’t know their children ahead of time.
+----------------------------------------------------
+It is recommended that components use a special children prop to pass children elements directly into their output.
+Ex: function FancyBorder(props) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+}
+----------------------------------------------------
+There are no limitations on what you can pass as props in React.
+----------------------------------------------------
+Sometimes we think about components as being “special cases” of other components.
+----------------------------------------------------
+In React, this is also achieved by composition, where a more “specific” component renders a more “generic” 
+one and configures it with props.
+----------------------------------------------------
+Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way.
+----------------------------------------------------
